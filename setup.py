@@ -422,7 +422,7 @@ if __name__=='__main__':
     ServerIP = input()
     prepare(Servername,ServerIP)
     print('\n现在，开始安装v2ray核心>>>\n')
-    os.system('wget -O /tmp/ https://mirror.fastspeedgo.xyz/V2rayWithWebControl/go.sh')
+    os.system('wget -P /tmp/ https://mirror.fastspeedgo.xyz/V2rayWithWebControl/go.sh')
     os.system('bash /tmp/go.sh')
     print('\n现在，开始处理v2ray配置和nginx配置>>>\n')
     configure_nginx_v2ray()
