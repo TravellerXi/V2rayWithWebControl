@@ -10,12 +10,9 @@ import pymysql
 
 from checkupdate import *
 
-
 from md5 import *
 
 from htmlbase import *
-
-from files import *
 
 from flask import send_from_directory
 
