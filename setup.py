@@ -196,6 +196,7 @@ def prepare(Servername,ServerIP):
         f.write(dhparam_pem)
     with open('/etc/nginx/conf.d/' + Servername+'.conf', 'w') as f:
         f.write(NginxConfigurationInfo)
+    os.system('rm -rf /usr/share/nginx/html')
     with open('/etc/nginx/conf.d/webui.conf', 'w') as f:
         f.write(WebUi_beforeIP+ServerIP+WebUi_afterIP)
     print ('预准备环境完毕')
@@ -406,7 +407,7 @@ def webui_configure():
     os.system('wget -P /V2rayWithWebControl https://mirror.fastspeedgo.xyz/V2rayWithWebControl/webui.zip')
     os.system('unzip -d /V2rayWithWebControl /V2rayWithWebControl/webui.zip')
     os.system('mysql -uroot </V2rayWithWebControl/static/v2ray.sql')
-    os.system('cp /V2rayWithWebControl/static/startv2rayui.sh /etc/init.d/')
+    #os.system('cp /V2rayWithWebControl/static/startv2rayui.sh /etc/init.d/')
     with open ('/etc/init.d/startv2rayui.sh', 'w') as f:
         f.write(webui_init_configure)
     os.system('bash /V2rayWithWebControl/static/start.sh start')
