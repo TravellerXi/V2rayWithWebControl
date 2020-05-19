@@ -255,36 +255,11 @@ def CheckPassword(username,password):
             return 0
 
 
-
-def inviteC():
-
-    with open('static/invitecode','r',encoding='utf-8') as f:
-
-        return(f.read())
+@app.route('/', methods=['GET'])
+def root_redirect():
+    return redirect('/signin')
 
 
-
-
-
-
-
-@app.route('/', methods=['GET', 'POST'])
-
-def home():
-    return redirect('/success')
-
-
-
-
-
-
-@app.route('/mobile/introduce', methods=['GET'])
-
-def introduce_post_mobile():
-
-    with open('static/introuduce.html','r',encoding='utf-8') as f:
-
-        return(f.read())
 
 
 
@@ -318,7 +293,7 @@ def signin_form():
 
         if not result:
 
-            return (title_setup_pc('欢迎登录网络管理系统')+'''<form action="/signin" method="post">
+            return (title_setup_pc('欢迎管理系统')+'''<form action="/signin" method="post">
 
                           <p>用户名：<input name="username"></p>
 
@@ -578,5 +553,5 @@ def Functionrestartservice():
 
 if __name__ == '__main__':
 
-    app.run(host='0.0.0.0', port=8080, debug=True,threaded=True)
+    app.run(host='0.0.0.0', port=8082, debug=True,threaded=True)
 
