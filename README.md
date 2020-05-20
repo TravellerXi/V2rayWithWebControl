@@ -11,7 +11,7 @@ bash <(curl -L -s https://mirror.fastspeedgo.xyz/V2rayWithWebControl/install.sh)
 适用于 Centos 6/Centos7。
 
 <br><br>
-技术要点提要：
+技术提要：
 <br>1. 本脚本调用Python3执行，将会使用yum安装Python3。
 <br>2. 运行过程中第一次提示输入绑定的域名，在/etc/nginx/conf.d目录下生成'域名.conf'的Nginx配置文件，将域名绑定到该文件里，并启用SSL，默认证书放置目录/etc/nginx/ssl，用户可按需自行替换为自己的证书。
 <br>提示：域名可用cloudflare的CDN加速。
