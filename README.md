@@ -2,12 +2,12 @@
 
 介绍:安装v2ray，并提供web管理后台，可在后台重启服务，查看服务状态，下载客户端和配置等。
 
-<br><br>
+<br>
 
 安装教程：一句话安装：<br><br>
 bash <(curl -L -s https://mirror.fastspeedgo.xyz/V2rayWithWebControl/install.sh) 
 
-<br><br>
+<br>
 适用于 Centos 6/Centos7。
 
 <br><br>
