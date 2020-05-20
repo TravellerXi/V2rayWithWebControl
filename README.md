@@ -17,7 +17,7 @@ bash <(curl -L -s https://mirror.fastspeedgo.xyz/V2rayWithWebControl/install.sh)
 <br>提示：域名可用cloudflare的CDN加速。
 <br>3. 运行过程中第二次提示输入服务器公网IP。在/etc/nginx/conf.d目录下生成webui.conf，用做管理页面，该页面目前设置为http页面，用户如有能力可自行更改为https。
 <br>4. web管理页面源码在/V2rayWithWebControl/目录下，如遇到web管理页面打不开，可执行该命令重启web管理页面：
-bash /V2rayWithWebControl/static/start.sh restart
+<br>bash /V2rayWithWebControl/static/start.sh restart
 <br>5. 确保443端口和80端口未被占用。
 <br>6. 默认关闭防火墙，如有能力可自行添加防火墙规则并开启防火墙，程序使用端口80和443.
 <br>7. 任何其他问题，欢迎提issue。
