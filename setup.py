@@ -386,7 +386,7 @@ def configure_nginx_v2ray():
         os.system('systemctl stop firewalld')
         os.system('systemctl disable firewalld')
         os.system('systemctl start v2ray')
-        os.systemc('systemctl start mariadb')
+        os.system('systemctl start mariadb')
         os.system('systemctl enable mariadb')
         os.system('systemctl restart nginx')
     else:
