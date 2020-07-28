@@ -1,5 +1,5 @@
 #!/bin/bash
 yum install python3 wget -y
 wget -P /tmp/ https://mirror.fastspeedgo.xyz/V2rayWithWebControl/setup.py
-pip3 install flask
+pip3 install flask pymysql
 /usr/bin/python3 /tmp/setup.py
